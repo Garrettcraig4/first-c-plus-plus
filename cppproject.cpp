@@ -88,6 +88,8 @@ cout << "4/5 = " << (int) 4 / 5 << endl;
 
 cout << "4/5 = " << (float) 4 / 5 << endl; 
 
+
+//same as js
 cout << "----------- IF Statments -----------" << endl;
 
 int age = 70;
@@ -109,6 +111,8 @@ else {
     cout << "you can drive" << endl;
 }
 
+
+//same as js
 cout << "----------- switch statements -----------" << endl;
 
 int greetingOption = 2;
@@ -133,6 +137,36 @@ default :
 cout << "yo" << endl;
 
 }
+
+cout << "---------- turnary operatior ----------" << endl;
+
+//varable = (condition ) ? true : false  same as js
+
+int largestNum = (5>2) ? 5 : 2;
+
+
+cout << "------ arrays --------" << endl;
+
+
+int myFavNums[5]
+//            ^ has to be set to how many you need in the array 
+
+
+
+int badNums[5] = {4,13,14,24,34};
+
+cout << "bad num 1: " << badNums[0] << endl;
+
+char myName[7][5] = {{'G','a','r','r','e','t','t'},{'C','r','a','i','g'}};
+
+
+cout << "2nd letter in 2nd array" << myName[1][1] << endl;
+
+myName[0][2] = 'A';
+
+cout << "changed val" << myName[0][2] << endl;
+
+
 
 //return 0 means every thing worked
 return 0;
