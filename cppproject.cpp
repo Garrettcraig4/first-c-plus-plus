@@ -111,7 +111,28 @@ else {
 
 cout << "----------- switch statements -----------" << endl;
 
+int greetingOption = 2;
 
+
+switch(greetingOption){
+
+case 1: 
+cout << "hello" << endl;
+break;
+
+
+case 2:
+cout << "bonjour" << endl;
+break;
+
+case 3: 
+cout << "hola" << endl;
+break;
+
+default : 
+cout << "yo" << endl;
+
+}
 
 //return 0 means every thing worked
 return 0;
