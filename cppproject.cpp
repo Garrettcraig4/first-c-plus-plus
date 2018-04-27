@@ -88,6 +88,28 @@ cout << "4/5 = " << (int) 4 / 5 << endl;
 
 cout << "4/5 = " << (float) 4 / 5 << endl; 
 
+cout << "----------- IF Statments -----------" << endl;
+
+int age = 70;
+
+int ageAtLastExam = 16;
+
+bool isNotIntoxicated = true;
+
+if((age >= 1) && (age < 16 )){
+    cout << "You can't drive" << endl;
+}
+else if (! isNotIntoxicated){
+    cout << "you can't drive " << endl;
+}
+else if(age >= 80 && ((age > 100) || ((age - ageAtLastExam) > 5))){
+    cout << "you cant drive" << endl;
+}
+else {
+    cout << "you can drive" << endl;
+}
+
+cout << "----------- switch statements -----------" << endl;
 
 
 
