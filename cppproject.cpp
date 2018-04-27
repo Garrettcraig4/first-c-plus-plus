@@ -193,6 +193,31 @@ cout << endl;
 
 
 
+string numberGuessed;
+int intNumberGuessed = 0;
+
+do{
+
+cout << " Guess between 1 and 10:";
+
+getline(cin,numberGuessed);
+
+intNumberGuessed = stod(numberGuessed);
+
+cout << intNumberGuessed << endl;
+
+
+} while(intNumberGuessed != 4);
+
+cout<< "you win" << endl;
+
+
+
+
+
+
+
+
 //return 0 means every thing worked
 return 0;
 
