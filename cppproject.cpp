@@ -148,7 +148,7 @@ int largestNum = (5>2) ? 5 : 2;
 cout << "------ arrays --------" << endl;
 
 
-int myFavNums[5]
+int myFavNums[5];
 //            ^ has to be set to how many you need in the array 
 
 
@@ -157,14 +157,39 @@ int badNums[5] = {4,13,14,24,34};
 
 cout << "bad num 1: " << badNums[0] << endl;
 
-char myName[7][5] = {{'G','a','r','r','e','t','t'},{'C','r','a','i','g'}};
+char myName[5][5] = {{'G','a','r','r','e'},{'C','r','a','i','g'}};
 
 
 cout << "2nd letter in 2nd array" << myName[1][1] << endl;
 
-myName[0][2] = 'A';
+myName[0][1] = 'A';
 
 cout << "changed val" << myName[0][2] << endl;
+
+for(int i =1; i <= 10; i++){
+    cout << i << endl;
+}
+
+
+for(int j = 0; j < 2; j++){
+
+    for(int k = 0; k < 5; k++){
+        cout << myName[j][k];
+    }
+cout << endl;
+}
+
+
+int randomnum = (rand() % 100) + 1;
+//makes random numbers
+
+while(randomnum != 100){
+    cout << randomnum << ", ";
+    
+    randomnum = (rand() % 100) + 1; 
+}
+
+cout << endl;
 
 
 
