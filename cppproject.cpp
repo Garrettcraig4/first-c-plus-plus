@@ -211,9 +211,78 @@ cout << intNumberGuessed << endl;
 
 cout<< "you win" << endl;
 
+cout << "---------- strings ----------" << endl;
+
+//way done in c
+char happyArray[6] = {'H','a','p','p','y','\0'};
+
+// c++ way
+
+string birthdayString = " Birthday";
+
+cout << happyArray + birthdayString << endl;
+
+string yourName;
+
+cout << "what is your name? : ";
+
+getline(cin,yourName);
+
+cout << "Hello " << yourName << endl;
+
+double eulersConstant = .57721;
+string eulerGuess;
+double eulerGuessDouble;
+
+cout << "what is ulers constant? : ";
+
+getline(cin,eulerGuess);
+
+eulerGuessDouble = stod(eulerGuess);
+
+if(eulerGuessDouble == eulersConstant) {
+    cout << "you are right" << endl;
+} else 
+{
+    cout << "you are wrong" << endl;
+}
 
 
+cout << "size of string " << eulerGuess.size() << endl;
 
+cout << "is string empty " << eulerGuess.empty() << endl;
+
+cout << eulerGuess.append(" was your guess") << endl;
+
+
+string dogString = "dog";
+
+string catString = "cat";
+
+cout << dogString.compare(catString) << endl;
+
+cout << dogString.compare(dogString) << endl;
+
+cout << catString.compare(dogString) << endl;
+
+string wholeName = yourName.assign(yourName);
+
+cout << wholeName << endl;
+
+string firstName = wholeName.assign(wholeName,0, 7);
+cout << firstName << endl;
+
+int lastNameIndex = yourName.find("Craig",0);
+cout << "index of last name: " << lastNameIndex << endl;
+
+yourName.insert (5, " Justin");
+cout << "insert:" << yourName << endl;
+
+yourName.erase(6,7);
+cout << "erase: " << yourName << endl;
+
+yourName.replace(6,5,"Maximus");
+cout << "replace: " << yourName << endl;
 
 
 
