@@ -13,6 +13,7 @@ int main(){
 
 cout << "Hello World" << endl;
 
+//varables 
 
 const double PI = 3.1415926535;
 
@@ -26,7 +27,7 @@ float favNum = 4.44;
 
 double otherfavNum = 1.23323232323;
 
-
+int five = 5;
 
 cout << "First Leter Of Name:" << firstLetter << endl;
 
@@ -36,7 +37,7 @@ cout << "Favorite Number:" << favNum << endl;
 
 cout << "pi:" << PI << endl;
 
-
+cout << "---------- sizes -----------" << endl;
 
 cout << "size of int" << sizeof(favNum)
 << endl;
@@ -48,6 +49,47 @@ cout << "size of bool" << sizeof(isCool) << endl;
 cout << "size of float " << sizeof(favNum) << endl;
 
 cout << "size of double" << sizeof(otherfavNum) << endl; 
+
+//math
+
+cout << "----------- Math -----------" << endl;
+
+
+
+cout << "5 + 2 = " << 5+2 << endl;
+
+cout << "5 - 2 = " << 5-2 << endl;
+
+cout << "5 * 2 = " << 5*2 << endl;
+
+cout << "5 / 2 = " << 5/2 << endl;
+
+cout << "5 % 2 = " << 5%2 << endl;
+
+//does action after getting value of 5
+
+cout << "5++ = " << five++ <<endl;
+
+cout << "++5 =" << ++five << endl;
+
+cout << "5-- = " << five-- << endl;
+
+cout << "--5 = " << --five << endl; 
+
+//order of operation PEMDOS
+
+cout << "(1 + 2 - 3) * 2 = " << (1 + 2 - 3) * 2;
+
+
+
+cout << "4 / 5 = " << 4 / 5 << endl;
+
+cout << "4/5 = " << (int) 4 / 5 << endl; 
+
+cout << "4/5 = " << (float) 4 / 5 << endl; 
+
+
+
 
 //return 0 means every thing worked
 return 0;
