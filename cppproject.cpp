@@ -284,7 +284,24 @@ cout << "erase: " << yourName << endl;
 yourName.replace(6,5,"Maximus");
 cout << "replace: " << yourName << endl;
 
+cout << "-------- vectors -------- " << endl;
 
+vector <int> lotteryNumVect(10);
+
+int lotteryNumArray[5] = {4, 13, 14, 24, 34};
+
+lotteryNumVect.insert(lotteryNumVect.begin(), lotteryNumArray, 
+lotteryNumArray+3);
+
+cout << lotteryNumVect.at(2) << endl;
+
+cout << lotteryNumVect.back() << endl;
+
+cout << lotteryNumVect.empty() << endl;
+
+lotteryNumVect.push_back(64);
+
+cout << "------------ functions ----------- " << endl;
 
 
 //return 0 means every thing worked
