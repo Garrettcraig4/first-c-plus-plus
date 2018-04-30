@@ -43,6 +43,64 @@ int main()
 
     cout << "The FACTORAL of 3 is : " << getFactorial(3) << endl;
 
+    string garrettQuote = "Yo whats up";
+
+    ofstream writer("garrettquote.txt");
+
+    if (!writer)
+    {
+        cout << "Error opening file" << endl;
+        return -1;
+    }
+    else
+    {
+        writer << garrettQuote << endl;
+
+        writer.close();
+    }
+
+    ofstream writer2("garrettquote.txt", ios::app);
+
+    //Open a stream to append to whats there with ios::app
+    //ios::binary : Treat the file as binary
+    //ios::in : Open a file to read input
+    //ios::trunc : Default
+    //ios::out : Open a file to write out
+
+    if (!writer2)
+    {
+        cout << "Error opening file" << endl;
+        return -1;
+    }
+    else
+    {
+        writer2 << "/n -Garrett Craig" << endl;
+
+        writer2.close();
+    }
+
+    char letter;
+
+    ifstream reader("garrettquote.txt");
+
+    if (!reader)
+    {
+        cout << "error opening file" << endl;
+        return -1;
+    }
+    else
+    {
+
+        for (int i = 0; !reader.eof(); i++)
+        {
+            reader.get(letter);
+            cout << letter;
+        }
+
+        cout << endl;
+        reader.close();
+    }
+
     cout << "Hello World" << endl;
 
     //varables
