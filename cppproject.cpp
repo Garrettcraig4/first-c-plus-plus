@@ -32,6 +32,17 @@ int getFactorial(int number)
     return sum;
 }
 
+void makeMeYounger(int *age)
+{
+    cout << "I used to be : " << *age << endl;
+    *age = 3;
+}
+
+void actYourAge(int &age)
+{
+    age = 19;
+}
+
 int main()
 {
 
@@ -402,6 +413,52 @@ int main()
     }
 
     cout << "--------- pointers ---------" << endl;
+
+    int myage = 19;
+
+    char grade = 'G';
+
+    cout << "Size of int" << sizeof(myage) << endl;
+
+    cout << "Size of char" << sizeof(grade) << endl;
+
+    cout << "myage is is located at : " << &myage << endl;
+
+    int *agepointer = &myage;
+
+    cout << "address of pointer : " << agepointer << endl;
+
+    cout << "Data at memory address : " << *agepointer << endl;
+
+    int badNums2[5] = {4, 54, 66, 45, 644};
+
+    int *numArraypointer = badNums2;
+
+    cout << "address: " << numArraypointer << " Value : " << *numArraypointer << endl;
+
+    numArraypointer++;
+
+    cout << "address: " << numArraypointer << " Value : " << *numArraypointer << endl;
+
+    cout << "address: " << badNums2 << "Value : " << *badNums2 << endl;
+
+    makeMeYounger(&myage);
+
+    cout << "I'am " << myage << " years old now" << endl;
+
+    int &ageRef = myage;
+
+    cout << "myage : " << myage << endl;
+
+    ageRef++;
+
+    cout << "myage : " << myage << endl;
+
+    actYourAge(ageRef);
+
+    cout << " myage: " << myAge << endl;
+
+    cout << "----------- classes ---------" << endl;
 
     //return 0 means every thing worked
     return 0;
