@@ -74,7 +74,7 @@ int main()
     }
     else
     {
-        writer2 << "/n -Garrett Craig" << endl;
+        writer2 << "\n -Garrett Craig" << endl;
 
         writer2.close();
     }
@@ -381,6 +381,27 @@ int main()
     cout << lotteryNumVect.empty() << endl;
 
     lotteryNumVect.push_back(64);
+
+    cout << "------------- exception handling ------" << endl;
+
+    int num = 0;
+
+    try
+    {
+
+        if (num != 0)
+        {
+            cout << 2 / num << endl;
+        }
+        else
+            throw(num);
+    }
+    catch (int num)
+    {
+        cout << num << " is not valid " << endl;
+    }
+
+    cout << "--------- pointers ---------" << endl;
 
     //return 0 means every thing worked
     return 0;
