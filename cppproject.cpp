@@ -6,6 +6,59 @@
 #include <fstream>
 
 using namespace std;
+//classes come before main funciton
+
+class Animal
+{
+    // Attributes : heigth weight varables
+    // Capabilities : run eat functions / methods
+
+  private:
+    int height;
+    int weight;
+    string name;
+
+    static int numOfAnimals;
+
+  public:
+    int getHeight() { return height; }
+    int getWeight() { return weight; }
+    string getName() { return name; }
+    void setHeight(int cm)
+    {
+        height = cm;
+    }
+
+    void setWeight(int cm)
+    {
+        weight = cm;
+    }
+
+    void setName(string animalName)
+    {
+        name = animalName;
+    }
+
+    Animal(int, int, string);
+
+    ~Animal();
+
+    Animal();
+
+    static int getNumOfAnimals() { return numOfAnimals; }
+
+    void toString();
+};
+
+int Animal::numOfAnimals = 0;
+
+Animal::Animal(int height, int weight, string name)
+{
+    this->height = height;
+    this->weight = weight;
+    this->name = name;
+    Animal::numOfAnimals++;
+}
 
 //functions come before the main funciton
 
@@ -43,8 +96,35 @@ void actYourAge(int &age)
     age = 19;
 }
 
+Animal::~Animal()
+{
+    cout << "Animal " << this->name << " destoryed " << endl;
+}
+
+Animal::Animal()
+{
+    Animal::numOfAnimals++;
+}
+
+void Animal::toString()
+{
+
+    cout << this->name << " is " << this->height << "cm tall and " << this->weight << " kgs in weight" << endl;
+}
+
 int main()
 {
+    Animal jo;
+
+    jo.setHeight(40);
+    jo.setWeight(10);
+    jo.setName("jo");
+
+    cout << jo.getName() << " is " << jo.getHeight() << " tall and " << jo.getWeight() << " heavy " << endl;
+
+    Animal tom(36, 15, "tom");
+
+    cout << tom.getName() << " is " << tom.getHeight() << " tall and " << tom.getWeight() << " heavy " << endl;
 
     cout << "--------- functions -------- " << endl;
 
